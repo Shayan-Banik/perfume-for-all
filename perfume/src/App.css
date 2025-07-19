@@ -1,0 +1,26 @@
+ body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  /* scroll-behavior: smooth; */
+  overflow-x: hidden;
+  scroll-behavior: auto !important; /* Lenis manages scroll */
+  overscroll-behavior: none;
+}
+
+html,body{
+  scroll-behavior: smooth;
+}
+
+.app {
+  padding-top: 80px; 
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+} 
+
+
+

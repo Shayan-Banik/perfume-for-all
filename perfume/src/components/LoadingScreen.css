@@ -1,0 +1,25 @@
+:root {
+  --luxury-gold: #d4af37;
+  --luxury-gold-light: #f5e9b3;
+}
+
+
+.loader-bottle {
+  width: 4rem;
+  height: 6rem;
+  background: linear-gradient(to bottom, var(--luxury-gold), var(--luxury-gold-light));
+  border-radius: 1rem 1rem 0.3rem 0.3rem;
+  opacity: 0.85;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}

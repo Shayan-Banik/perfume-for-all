@@ -1,0 +1,125 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.1rem 2rem;
+  background: rgba(231, 15, 217, 0.1);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Playfair Display', serif; /* Hero-style font */
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FFD700; /* Luxury Gold */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links li {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  position: relative;
+  padding: 4px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-links li::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #FFD700; 
+  transition: 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.nav-links li:hover {
+  color: #FFD700;
+
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+
+.hamburger {
+  font-size: 1.5rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 220px;
+    padding: 1.2rem;
+    border-radius: 12px;
+    display: none;
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    padding: 0;
+  }
+}
